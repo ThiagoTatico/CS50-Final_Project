@@ -46,7 +46,7 @@ The application's Python code is split into two files: application.py and helper
   The main function of apology() is to render the apology.html template with the designated error message
 
 #### **layout.html:**
-  This is the layout used by other HTML templates. It has 3 tag blocks to insert data in the template using the layout: {% block title %}, {% block main %} and {% block footer %}.
+  This is the layout used by other HTML templates. It has 3 tag blocks to insert data in the template using the layout:  block title ,  block main  and  block footer .
 
 #### **index.html:**
   Home page template with the list of anime or series of the logged in user, inputs to add new items and a dropdown menu to select the item to be removed from the list.
