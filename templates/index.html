@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    
+    <div class="container">
+        
+        
+        <p class="page-subtitle">
+          <h3>Add an Anime</h3>
+        </p>
+            
+        <form action="/" method="post">
+                
+            <div class="form-wrapper">
+                <input type="text" name="Imgs" autocomplete="off" placeholder="Isert Image Link">
+                <input type="text" name="Hrefs" autocomplete="off" placeholder="Related site">
+                <input type="text" name="Names" autocomplete="off" placeholder="Name">
+                
+                <button class="btn btn-primary" type="submit">ADD</button>
+            </div>
+                
+        </form>
+        
+        
+        <p class="page-subtitle">
+          <h3>Remove an Anime</h3>
+        </p>
+        
+        <form action="/removes" method="post">
+            
+            <!-- Create a dynamic drop down menu -->
+            <div class="form-wrapper">
+                <select name="comp_select">
+                    
+                    <option selected value="">Choose...</option>
+                    {% for anime_image in anime_images %}
+                        <option value="{{ anime_image['name'] }}">{{ anime_image['name'] }}</option>
+                    {% endfor %}
+                    
+                </select>
+                
+                <button class="btn btn-primary" type="submit">REMOVE</button>
+            </div>
+            
+        </form>
+        
+    </div>
+    
+    <!-- Create a dynamic IMG tags with exter links in HTML -->
+    <div id="animeList">
+        
+        {% for anime_image in anime_images %}
+            
+            <a href= "{{ anime_image['siteL'] }}" target="_blank" > <img src= "{{ anime_image['imageL'] }}" > </a>
+            
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}
+
+{% block footer %}
+ 
+    <footer class="rodape">
+        <li class="projetos-item"> <a href="https://github.com/ThiagoTatico" target="_blank">GitHub</a> </li>
+        <li class="projetos-item"> <a href="https://www.linkedin.com/in/thiago-tatico-0b9057216/" target="_blank">Linkedin</a> </li>
+    </footer>
+    
+{% endblock %}
