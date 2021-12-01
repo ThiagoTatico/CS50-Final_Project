@@ -4,17 +4,17 @@
 
  #### Video Demo: https://www.youtube.com/watch?v=qx0cIr2Y-1s
 
-#### Description:
+### Description:
 
 This is my final project for the CS50 course at Harvard. It is a simple site where you can create a list of animes and series to remember to watch later, just insert an image link, a site to redirect the user when clicking on the image, and a title. The list created is saved on your account and it is accessible from anywhere. Any time you need to change it, just log in and it is there.
 
-#### Application details:
+### Application details:
 
 The application was made on CS50 IDE using Python, HTML, CSS, Flask,Bootstrap frameworks and SQLite database.
 
 The application's Python code is split into two files: application.py and helpers.py.
 
-#### **application.py:**
+### **application.py:**
  This is the application's heart, where most of the functions and commands to control the website are. First, some libraries are imported to build the application, such as CS50's SQL to be able to control the database through Python, some important Flask libraries, and two other libraries to identify errors and hash user's passwords when creating one account on the website, in addition to importing helpers.py functions to be used in the main code.
 
  Then the Flask application is configured and the session system is implemented for each user so that they do not need to log in every time they refresh the page. And finally, the CS50 library is configured to use the SQLite database
@@ -39,25 +39,25 @@ The application's Python code is split into two files: application.py and helper
   **errorhandler():**
    The errorhandler() function returns error messages when something doesn't work as it should.
 
-#### **helpers.py:**
+### **helpers.py:**
  helpers.py has two functions: **apology(message, code=400): and login_required(f):.**
 
 **apology(message, code=400):**
   The main function of apology() is to render the apology.html template with the designated error message
 
-#### **layout.html:**
+### **layout.html:**
   This is the layout used by other HTML templates. It has 3 tag blocks to insert data in the template using the layout:  block title ,  block main  and  block footer .
 
-#### **index.html:**
+### **index.html:**
   Home page template with the list of anime or series of the logged in user, inputs to add new items and a dropdown menu to select the item to be removed from the list.
 
-#### **login.html:**
+### **login.html:**
   Login page template.
 
-#### **register.html:**
+### **register.html:**
   Registration page template.
 
-#### **apology.html:**
+### **apology.html:**
   Returns an image with an error message generated dynamically with the help of the apology(message, code=400) function. 
 
 ### **Database:**
